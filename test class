@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int Num, fact = 1, Counter = 10;
+    string name;
+
+    cout << endl;
+
+    cout << "Enter your name: ";
+    getline(cin, name);
+
+    cout << endl;
+
+    cout << "Enter your number: ";
+    cin >> Num;
+    while (cin.fail())
+    {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "invalid command enter the number again: ";
+
+        cin >> Num;
+    }
+    for (int i = Num; i > 0; i--)
+    {
+        fact *= i;
+    }
+
+    cout << endl;
+    cout << name << " factorial of " << Num << " is = "
+        << "\t" << fact << endl;
+cout << "Factorial is: " << Fact << endl;
+	do
+	{
+		cout << Num << " x " << Counter << " = " << Num * Counter << endl;
+		Counter--;
+	} while (Counter > 0);
+	for (int i = 10; i > 5; i--)
+	{
+		cout << Num << " with exponent of " << i << " = " << pow(Num, i) << endl;
+	}
+	return 0;
+}
